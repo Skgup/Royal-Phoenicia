@@ -16,7 +16,7 @@ function App() {
 
 
   return (
-    <>
+    <> <div className="overflow-hidden">
 <BrowserRouter>
 
 
@@ -30,7 +30,7 @@ function App() {
 <Event/>
 
 <Footer/>
-</BrowserRouter>
+</BrowserRouter></div>
     </>
   )
 }

@@ -4,14 +4,14 @@ import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
 function Footer() {
   return (
     <footer className="flex flex-col md:flex-row bg-[#33658A] text-white">
-      {/* Left Section */}
+     
     
-      <div className="flex-1 flex  font-serif flex-col justify-center items-start p-10 space-y-6 text-2xl md:text-3xl ">
-        <a href="#">I   Rooms</a>
-        <a href="#">II   Wellness</a>
-        <a href="#">III Gastro</a>
-        <a href="#">IV  Hotel</a>
-        <a href="#">V   Events</a>
+      <div className="flex-1 text-justify font-serif flex flex-col justify-center items-center p-10 space-y-4 ">
+        <a href="#">  <span className="pr-1.5">I</span> Rooms</a>
+        <a href="#"><span className="pr-2">II</span>   Wellness</a>
+        <a href="#"><span className="pr-1.5">III</span> Gastro</a>
+        <a href="#"> <span className="pr-1.5">IV</span> Hotel</a>
+        <a href="#"> <span className="pr-1.5">V </span> Events</a>
       </div>
 
       {/* Center Section */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lock } from 'lucide-react'; 
+import { Lock } from 'lucide-react';
 import Button from '../common/Button';
 import BookingButton from '../common/BookingButton';
 
@@ -31,45 +31,51 @@ function StayPackage() {
     },
   ];
 
-  return (<>
-    <div className="bg-orange-50 min-h-screen w-screen flex items-center justify-center flex-col ">
-        <div className='m-3 p-8'><h1 className='text-7xl max-md:text-3xl text-amber-950 '>Stay Packages</h1></div>
-      <div className="flex gap-8 px-10 overflow-x-auto w-full max-md:flex-col scrollbar-hiden">
-        {card.map((card) => (
-          <div
-            key={card.id}
-            className="flex-shrink-0 w-[50%] max-md:w-full h-[80vh] relative group overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
-          >
-            {/* Background Image */}
+  return (
+    <>
+      <div className="bg-orange-50 min-h-screen w-screen flex items-center justify-center flex-col">
+        <div className='m-3 p-8'>
+          <h1 className='text-7xl max-md:text-3xl text-amber-950 text-center'>Stay Packages</h1>
+        </div>
+
+        <div className="flex gap-8 px-10 overflow-x-auto w-full max-md:flex-col scrollbar-hide">
+          {card.map((card) => (
             <div
-              className="absolute inset-0 bg-center bg-cover scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out"
-              style={{ backgroundImage: `url(${card.imageUrl})` }}
-            ></div>
+              key={card.id}
+              className="flex-shrink-0 w-[50%] max-lg:w-[80%] max-md:w-full h-[80vh] max-md:h-[60vh] relative group overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 "
+            >
+             
+              <div
+                className="absolute inset-0 bg-center bg-cover scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                style={{ backgroundImage: `url(${card.imageUrl})` }}
+              ></div>
 
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/30"></div>
+             
+              <div className="absolute inset-0 bg-black/30"></div>
 
-            {/* Text Content */}
-            <div className="absolute inset-0 flex flex-col justify-between p-8">
-              <div className="text-sm text-white text-center tracking-widest">All season</div>
-              <div className="text-center text-white">
-                <h1 className="text-2xl font-bold mb-2">{card.title}</h1>
-                <p className="text-sm">{card.subtitle}</p>
-              </div>
+           
+              <div className="absolute inset-0 flex flex-col justify-between p-8">
+                <div className="text-sm text-white text-center tracking-widest">All season</div>
+                <div className="text-center text-white">
+                  <h1 className="text-2xl max-md:text-xl font-bold mb-2">{card.title}</h1>
+                  <p className="text-sm max-md:text-xs">{card.subtitle}</p>
+                </div>
 
-              {/* Buttons */}
-              <div className="flex justify-center gap-4">
-                <Button className="text-white"  text="More" />
-                <div className="">
-                  <BookingButton text="Booking" />
+         
+                <div className="flex justify-center gap-4">
+                  <Button className="text-white" text="More" />
+                  <div>
+                    <BookingButton text="Booking" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-     
-    </div> <div className='border border-gray-500 m-30 max-md:m-16'></div></>
+
+      <div className='border border-gray-500 mx-10 my-12 max-md:mx-4'></div>
+    </>
   );
 }
 

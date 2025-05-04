@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import TopBar from '../navbar/TopBar';
-import NavBar from "../navbar/NavBar";
 
 const images = [
   "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWx8ZW58MHx8MHx8fDA%3D",
@@ -20,9 +19,9 @@ export default function HeroCarousel() {
 
   return (
     <>
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full h-screen overflow-hidden scrollbar-hidden">
         <TopBar />
-        <NavBar />
+       
 
    
         <div className="absolute inset-0">
